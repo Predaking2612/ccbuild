@@ -1,12 +1,12 @@
-from git import Repo
 import os
+
 import system
 
 
 def fetch_sources():
     # Validate that we are cloning into correct directory
-    verification_file = system.current_path() + "/ccbuild-files/is_correct_file"
-    verification_source = system.current_path() + "/ccbuild-files/.sources_exist"
+    verification_file = system.current_path() + "/src-files/is_correct_file"
+    verification_source = system.current_path() + "/src-files/.sources_exist"
 
     if system.is_file(verification_file):
         first_buffer = system.readf(verification_file)
@@ -17,7 +17,7 @@ def fetch_sources():
     else:
         raise Exception("\n\tThis command should be executed within the "
                         "root directory of poky clone.\n"
-                        "\trun: 'ccbuild fetch poky' before "
+                        "\trun: 'src fetch poky' before "
                         "executing this command\n")
 
     # Validate whether previous sources exists

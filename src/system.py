@@ -1,5 +1,3 @@
-
-
 def is_file(name):
     from pathlib import Path
     file = Path(name)
