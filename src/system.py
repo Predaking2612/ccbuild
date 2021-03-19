@@ -19,6 +19,12 @@ def readf(name):
     return f.read()
 
 
+def writef(name, data=""):
+    file = open(name, "w+")
+    file.write(data)
+    file.close()
+
+
 def current_path():
     import pathlib
     return str(pathlib.Path().absolute())
